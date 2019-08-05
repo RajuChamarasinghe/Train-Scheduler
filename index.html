@@ -5,11 +5,66 @@
     <title>Train Scheduler</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--<script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>-->
+    <script src="moment.js"></script>
+    <script src="train.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="container">
+        <div class="jumbotron text-center mx-n3 mycustom-jumbotron">
+            <div class="text-white">
+                <h1 class="display-4">Anytime Train</h1>
+                <p class="lead">Choo Choo. Chee Chee.</p>
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="col-sm-3 bg-primary text-white">Train Name</div>
+            <div class="col-sm-3 bg-primary text-white">Destination</div>
+            <div class="col-sm-2 bg-primary text-white">First Train Time</div>
+            <div class="col-sm-1 bg-primary text-white">Frequency</div>
+            <div class="col-sm-2 bg-primary text-white">Next Arrival</div>
+            <div class="col-sm-1 bg-primary text-white">Mins away</div>
+        </div>
+    </div>
+    <div class="container border border-primary mb-3" id="trainsh">
+
+    </div>
+ 
+    <div class="container border border-primary mt-1">
+        <div class="p-3 mx-n3 bg-primary text-white">Add Train</div>
+        <!-- <form> -->
+        <div class="form-group">
+            <label for="trainName">Train Name:</label>
+            <input type="text" class="form-control" id="txtTrainName" placeholder="Enter Train Name" name="TrainName">
+        </div>
+        <div class="form-group">
+            <label for="destination">Destination:</label>
+            <input type="text" class="form-control" id="txtdestination" placeholder="Enter Destination"
+                name="destination">
+        </div>
+        <div class="form-group">
+            <label for="firstTrainTime">First Train Time:</label>
+            <input type="text" class="form-control" id="txtfirstTrainTime" placeholder="Enter First Train Time"
+                name="firstTrainTime">
+        </div>
+        <div class="form-group">
+            <label for="frequency">Frequency (min):</label>
+            <input type="text" class="form-control" id="txtfrequency" placeholder="Enter Frequency" name="frequency">
+        </div>
+        <button type="submit" id="btnSubmit" class="btn btn-primary mb-3">Submit</button>
+        <!-- </form> -->
+    </div>
 </body>
 
 </html>
-    
